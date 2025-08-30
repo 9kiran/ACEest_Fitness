@@ -48,5 +48,5 @@ def add_workout():
     workouts.append({"workout": workout, "duration": duration})
     return redirect(url_for("home"))
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     app.run(host="0.0.0.0", port=5000)
