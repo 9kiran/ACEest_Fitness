@@ -1,71 +1,102 @@
-# ACEest Fitness Tracker – DevOps Assignment 1
+# ACEest Fitness Tracker
 
-## Objective
-This assignment demonstrates the application of fundamental DevOps practices including:
-- Flask application development
-- Version control with Git and GitHub
-- Unit testing using Pytest
-- Automated testing with GitHub Actions
-- Containerization using Docker
-- Continuous Integration / Continuous Delivery (CI/CD) pipeline
+[![CI/CD Pipeline](https://github.com/9kiran/ACEest_Fitness/actions/workflows/main.yml/badge.svg)](https://github.com/9kiran/ACEest_Fitness/actions)
 
----
+## Overview
+This is a simple **Flask-based fitness tracker application** for ACEest Fitness and Gym.  
+It allows users to add workouts with duration and view logged workouts.
 
-## Problem Statement
-ACEest Fitness and Gym is a growing startup that requires an automated and streamlined development workflow.  
-As a Junior DevOps Engineer, my task was to build a **Flask-based fitness tracker application** and implement:
-- Automated testing
+The project demonstrates DevOps practices:
+- Flask web application development
+- Unit testing with Pytest
 - Docker containerization
-- GitHub Actions CI/CD pipeline
+- Continuous Integration / Continuous Delivery (CI/CD) using GitHub Actions
 
 ---
 
-## Deliverables
-1. **Flask Web Application** – `app.py`  
-   - Allows users to log workouts with duration.  
-   - Displays all logged workouts.
+## Setup and Run Locally
 
-2. **Version Control (GitHub Repository)**  
-   - Source code maintained in a public GitHub repository with meaningful commits.  
-
-3. **Unit Testing with Pytest** – `tests/test_app.py`  
-   - Tests for application routes, valid inputs, and error handling.  
-
-4. **Dockerfile**  
-   - Containerizes the Flask application for consistent deployment.  
-
-5. **CI/CD Pipeline** – `.github/workflows/main.yml`  
-   - Automated workflow triggered on push events.  
-   - Steps: checkout → install dependencies → run tests → build Docker image.  
-
-6. **README.md**  
-   - Instructions on setup, running tests, Docker usage, and pipeline overview.  
-
----
-
-## Setup Instructions
-
-### Run Locally
+### 1. Clone Repository
 ```bash
-pip install -r requirements.txt
-python app.py
+git clone https://github.com/9kiran/ACEest_Fitness.git
+cd ACEest_Fitness
+````
+
+### 2. (Optional) Create Virtual Environment
+
+```bash
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Linux/Mac
+source venv/bin/activate
 ```
 
-### Run Tests (Pytest)
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run Application
+
+If your Flask app is inside the `aceest_fitness` folder:
+
+```bash
+python -m aceest_fitness.app
+```
+
+The app will run at [http://localhost:5000](http://localhost:5000)
+
+---
+
+## Running Tests Locally
+
+This project uses **Pytest**.
+
+Run:
+
 ```bash
 pytest
 ```
 
-### Run with Docker
+Expected result: All tests pass ✅
+
+---
+
+## Running with Docker (Optional)
 
 Build Docker image:
+
 ```bash
 docker build -t aceest_fitness .
 ```
 
 Run container:
+
 ```bash
 docker run -p 5000:5000 aceest_fitness
 ```
 
-Access the app at 👉 http://localhost:5000
+Open: [http://localhost:5000](http://localhost:5000)
+
+---
+
+## GitHub Actions Pipeline
+
+The pipeline is defined in `.github/workflows/main.yml`.
+
+### Trigger
+
+* Runs automatically on every commit to **any branch**
+* Runs on pull requests
+
+### Steps
+
+1. **Checkout code** – Pulls the repo into the GitHub runner
+2. **Set up Python** – Installs Python 3.10
+3. **Install dependencies** – Installs requirements from `requirements.txt`
+4. **Run tests** – Executes Pytest to ensure application works
+5. **Build Docker image** – Builds a container image for the Flask app
+
+✅ This ensures code is tested and build-ready on every commit.
