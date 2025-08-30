@@ -1,7 +1,7 @@
 # ACEest Fitness Tracker
 
 [![CI/CD Pipeline](https://github.com/9kiran/ACEest_Fitness/actions/workflows/main.yml/badge.svg)](https://github.com/9kiran/ACEest_Fitness/actions)
-[![codecov](https://codecov.io/gh/9kiran/ACEest_Fitness/branch/main/graph/badge.svg)](https://codecov.io/gh/9kiran/ACEest_Fitness)
+[![Coverage Status](https://codecov.io/gh/9kiran/ACEest_Fitness/branch/main/graph/badge.svg)](https://codecov.io/gh/9kiran/ACEest_Fitness)
 
 ---
 
