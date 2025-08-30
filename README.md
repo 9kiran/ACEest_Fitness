@@ -1,8 +1,3 @@
-Perfect 👍 here’s your **final cleaned-up `README.md`** with a new **Troubleshooting** section added at the bottom.
-
----
-
-````markdown
 # ACEest Fitness Tracker
 
 [![CI/CD Pipeline](https://github.com/9kiran/ACEest_Fitness/actions/workflows/main.yml/badge.svg)](https://github.com/9kiran/ACEest_Fitness/actions)
