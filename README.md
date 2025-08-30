@@ -2,6 +2,9 @@
 
 [![CI/CD Pipeline](https://github.com/9kiran/ACEest_Fitness/actions/workflows/main.yml/badge.svg)](https://github.com/9kiran/ACEest_Fitness/actions)
 
+[![Coverage Status](https://codecov.io/gh/9kiran/ACEest_Fitness/branch/main/graph/badge.svg)](https://codecov.io/gh/9kiran/ACEest_Fitness)
+
+
 ## Overview
 This is a simple **Flask-based fitness tracker application** for ACEest Fitness and Gym.  
 It allows users to add workouts with duration and view logged workouts.
